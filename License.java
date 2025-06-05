@@ -5,4 +5,11 @@ public class License {
 	private Car licenseHolder;
 	private int id;
 	private int validGarageId;
+	
+	public License(Car licenseHolder, int validInGarageId) {
+		uniqueId++;
+		this.licenseHolder = licenseHolder;
+		this.id = uniqueId;
+		this.validGarageId = validInGarageId;
+	}
 }
