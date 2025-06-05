@@ -14,4 +14,17 @@ public class Garage {
 		this.maxCapacity = maxCapacity;
 		this.parkedCars = new ArrayList<Car>();
 	}
+	
+	public boolean CheckIfValid(Car car, License license) {
+		if (parkedCars.size() >= maxCapacity) {
+			return false;
+		}
+		if(!license.GetLicenseHolderPlate().equals(car.GetLicensePlate())) {
+			return false;
+		}
+		if (license.GetValidInGarageId() != this.id) {
+			return false;
+		}
+		return true;
+	}
 }
