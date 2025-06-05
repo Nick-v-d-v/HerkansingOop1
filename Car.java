@@ -13,19 +13,19 @@ public class Car {
 		this.colour = colour;
 	}
 	
-	public String getLicensePlate() {
+	public String GetLicensePlate() {
 		return licensePlate;
 	}
 	
-	public String getbrand() {
+	public String GetBrand() {
 		return brand;
 	}
 	
-	public String getmodel() {
+	public String GetModel() {
 		return model;
 	}
 	
-	public String getcolour() {
+	public String GetColour() {
 		return colour;
 	}
 }

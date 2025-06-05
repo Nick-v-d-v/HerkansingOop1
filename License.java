@@ -12,4 +12,12 @@ public class License {
 		this.id = uniqueId;
 		this.validGarageId = validInGarageId;
 	}
+	
+	public String GetLicenseHolderPlate() {
+		return licenseHolder.GetLicensePlate();
+	}
+	
+	public int GetValidInGarageId() {
+		return validGarageId;
+	}
 }
