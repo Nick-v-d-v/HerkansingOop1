@@ -110,6 +110,15 @@ public class Main {
                  selectedGarage.UnparkCar(selectedCar);
                  System.out.println("Auto uit garage gehaald.");
                  break;
+                 
+			 case 5:
+                 if (selectedGarage == null) {
+                     System.out.println("Selecteer eerst een garage.");
+                     break;
+                 }
+                 int vrijePlekken = selectedGarage.maxCapacity - selectedGarage.GetCapacity();
+                 System.out.println("Vrije plekken in garage " + selectedGarage.GetId() + ": " + vrijePlekken);
+                 break;
 			}
 		}
 	}
