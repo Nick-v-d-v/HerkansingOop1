@@ -49,6 +49,15 @@ public class Garage {
 	public int GetCapacity() {
 		return parkedCars.size();
 	}
+	
+	public Car GetCarByLicense(String license) {
+		for (Car car : parkedCars) {
+			if (car.GetLicensePlate().equals(license)) {
+				return car;
+			}
+		}
+		return null;
+	}
 }
 
 	
