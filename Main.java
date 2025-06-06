@@ -77,6 +77,30 @@ public class Main {
                      System.out.println("Garage niet gevonden.");
                  }
                  break;
+                 
+			 case 3:
+                 if (selectedCar == null || selectedGarage == null) {
+                     System.out.println("Selecteer eerst een auto en een garage.");
+                     break;
+                 }
+                 License licenseToUse = null;
+                 for (License l : licenses) {
+                     if (l.GetLicenseHolderPlate().equals(selectedCar.GetLicensePlate())) {
+                         licenseToUse = l;
+                         break;
+                     }
+                 }
+                 if (licenseToUse == null) {
+                     System.out.println("Geen geldige parkeervergunning gevonden voor deze auto.");
+                     break;
+                 }
+                 boolean geparkeerd = selectedGarage.ParkCar(selectedCar, licenseToUse);
+                 if (geparkeerd) {
+                     System.out.println("Auto succesvol geparkeerd.");
+                 } else {
+                     System.out.println("Auto kon niet geparkeerd worden (vol, verkeerde garage of vergunning).");
+                 }
+                 break;
 			}
 		}
 	}
