@@ -23,6 +23,21 @@ public class Main {
 		
 		Car selectedCar = null;
 		Garage selectedGarage = null;
+		
+		boolean running = true;
+		while (running) {
+			System.out.println("Kies een optie:");
+			System.out.println("1. Selecteer auto");
+			System.out.println("2. Selecteer garage");
+			System.out.println("3. Parkeer auto");
+			System.out.println("4. Haal auto uit garage");
+			System.out.println("5. Bekijk vrije plekken garage");
+			System.out.println("0. Stoppen");
+			System.out.print("Je keuze: ");
+			
+			int keuze = scanner.nextInt();
+			scanner.nextLine();
+		}
 	}
 
 }
