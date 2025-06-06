@@ -3,10 +3,10 @@ package herkansingOop1;
 import java.util.ArrayList;
 
 public class Garage {
-	public static int uniqueId = 0;
-	public ArrayList<Car> parkedCars;
-	public int id;
-	public int maxCapacity;
+	private static int uniqueId = 0;
+	private ArrayList<Car> parkedCars;
+	private int id;
+	private int maxCapacity;
 
 	public Garage(int maxCapacity) {
 		uniqueId++;
