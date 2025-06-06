@@ -58,6 +58,16 @@ public class Garage {
 		}
 		return null;
 	}
+	
+	public ArrayList<Car> GetCarsByModel(String model) {
+		ArrayList<Car> result = new ArrayList<Car>();
+		for (Car car: parkedCars) {
+			if (car.GetModel().equals(model)) {
+				result.add(car);
+			}
+		}
+		return result;
+	}
 }
 
 	
