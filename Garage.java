@@ -27,4 +27,12 @@ public class Garage {
 		}
 		return true;
 	}
+	
+	public boolean ParkCar(Car car, License license) {
+		if (CheckIfValid(car, license)) {
+			parkedCars.add(car);
+			return true;
+		}
+		return false;
+	}
 }
