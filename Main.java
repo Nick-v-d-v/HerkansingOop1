@@ -6,6 +6,11 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		
+		ArrayList<Car> cars = new ArrayList<>();
+		cars.add(new Car("AA-11-BB", "Opel", "Zafira", "Black"));
+		cars.add(new Car("CC-22-DD", "Toyota", "Corolla", "White"));
+		cars.add(new Car("EE-33-FF", "Ford", "Focus", "Blue"));
 
 	}
 
