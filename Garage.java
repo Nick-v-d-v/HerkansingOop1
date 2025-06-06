@@ -41,6 +41,14 @@ public class Garage {
 			parkedCars.remove(car);
 		}
 	}
+	
+	public int GetId() {
+		return id;
+	}
+	
+	public int GetCapacity() {
+		return parkedCars.size();
+	}
 }
 
 	
