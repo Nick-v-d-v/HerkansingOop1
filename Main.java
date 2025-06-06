@@ -55,6 +55,28 @@ public class Main {
 					System.out.println("Ongeldige keuze.");
 				}
 				break;
+				
+			 case 2:
+                 System.out.println("Beschikbare garages:");
+                 for (Garage g : garage) {
+                     System.out.printf("Garage ID %d (max capaciteit %d)\n", g.GetId(), g.maxCapacity);
+                 }
+                 System.out.print("Kies garage ID: ");
+                 int garageId = scanner.nextInt();
+                 scanner.nextLine();
+                 selectedGarage = null;
+                 for (Garage g : garage) {
+                     if (g.GetId() == garageId) {
+                         selectedGarage = g;
+                         break;
+                     }
+                 }
+                 if (selectedGarage != null) {
+                     System.out.println("Je hebt garage geselecteerd: " + selectedGarage.GetId());
+                 } else {
+                     System.out.println("Garage niet gevonden.");
+                 }
+                 break;
 			}
 		}
 	}
