@@ -98,8 +98,17 @@ public class Main {
                  if (geparkeerd) {
                      System.out.println("Auto succesvol geparkeerd.");
                  } else {
-                     System.out.println("Auto kon niet geparkeerd worden (vol, verkeerde garage of vergunning).");
+                     System.out.println("Auto kon niet geparkeerd worden.");
                  }
+                 break;
+                 
+			 case 4:
+                 if (selectedCar == null || selectedGarage == null) {
+                     System.out.println("Selecteer eerst een auto en een garage.");
+                     break;
+                 }
+                 selectedGarage.UnparkCar(selectedCar);
+                 System.out.println("Auto uit garage gehaald.");
                  break;
 			}
 		}
