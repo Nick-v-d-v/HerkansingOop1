@@ -119,8 +119,17 @@ public class Main {
                  int vrijePlekken = selectedGarage.maxCapacity - selectedGarage.GetCapacity();
                  System.out.println("Vrije plekken in garage " + selectedGarage.GetId() + ": " + vrijePlekken);
                  break;
+                 
+			 case 0:
+                 running = false;
+                 System.out.println("Programma gestopt.");
+                 break;
+
+             default:
+                 System.out.println("Ongeldige keuze.");
 			}
-		}
+		}		
+		scanner.close();
 	}
 
 }
