@@ -20,6 +20,9 @@ public class Main {
 		licenses.add(new License(cars.get(0), garage.get(0).GetId()));
 		licenses.add(new License(cars.get(1), garage.get(0).GetId()));
 		licenses.add(new License(cars.get(2), garage.get(1).GetId()));
+		
+		Car selectedCar = null;
+		Garage selectedGarage = null;
 	}
 
 }
