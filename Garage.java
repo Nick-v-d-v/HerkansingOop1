@@ -7,19 +7,19 @@ public class Garage {
 	public ArrayList<Car> parkedCars;
 	public int id;
 	public int maxCapacity;
-	
+
 	public Garage(int maxCapacity) {
 		uniqueId++;
 		this.id = uniqueId;
 		this.maxCapacity = maxCapacity;
 		this.parkedCars = new ArrayList<Car>();
 	}
-	
+
 	public boolean CheckIfValid(Car car, License license) {
 		if (parkedCars.size() >= maxCapacity) {
 			return false;
 		}
-		if(!license.GetLicenseHolderPlate().equals(car.GetLicensePlate())) {
+		if (!license.GetLicenseHolderPlate().equals(car.GetLicensePlate())) {
 			return false;
 		}
 		if (license.GetValidInGarageId() != this.id) {
@@ -27,7 +27,7 @@ public class Garage {
 		}
 		return true;
 	}
-	
+
 	public boolean ParkCar(Car car, License license) {
 		if (CheckIfValid(car, license)) {
 			parkedCars.add(car);
@@ -35,4 +35,12 @@ public class Garage {
 		}
 		return false;
 	}
+	
+	public void UnparkCar(Car car) {
+		if (parkedCars.contains(car)) {
+			parkedCars.remove(car);
+		}
+	}
 }
+
+	
