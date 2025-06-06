@@ -11,7 +11,11 @@ public class Main {
 		cars.add(new Car("AA-11-BB", "Opel", "Zafira", "Black"));
 		cars.add(new Car("CC-22-DD", "Toyota", "Corolla", "White"));
 		cars.add(new Car("EE-33-FF", "Ford", "Focus", "Blue"));
-
+		
+		
+		ArrayList<Garage> garage = new ArrayList<>();
+		garage.add(new Garage(2));
+		garage.add(new Garage(3));
 	}
 
 }
